@@ -1,0 +1,86 @@
+* {
+    margin: 0; /* Quita el margen por defecto */
+    padding: 0; /* Quita el padding por defecto */
+    box-sizing: border-box; /* Hace que el ancho y alto sean el total de lo que se le asigna */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente por defecto */
+    background-color: #555764; /* Color de fondo */
+    display: flex; /* Hace que los elementos se muestren en fila */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra el contenido */
+    min-height: 100vh; /* Altura minima del viewport */
+}
+
+.form-content {
+    background: linear-gradient(
+        50deg, /* Grados de inclinación */
+        rgba(40, 42, 55, 1) 50%, /* Color de inicio */
+        rgba(40, 42, 55, 0.7) /* Color de fin */
+    ),
+    url(images/fondo.jpg); /* Imagen de fondo */
+    background-position: center; /* Posición de la imagen */
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-size: cover; /* Se ajusta al tamaño del contenedor */
+    padding: 50px; /* Espaciado interno */
+    width: 1000px; /* Ancho del contenedor */
+    border-radius: 25px; /* Borde redondeado */
+}
+
+.form-content h2 {
+    color: #F4F6F9; /* Color del texto */
+    font-size: 40px; /* Tamaño de la fuente */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+form {
+    display: flex; /* Hace que los elementos se muestren en fila */
+    flex-direction: column; /* Hace que los elementos se muestren en columna */
+    width: 50%; /* Ancho del contenedor */
+}
+
+label {
+    font-size: 17px; /* Tamaño de la fuente */
+    color: #959AAB; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+input, textarea {
+    padding: 17px; /* Espaciado interno */
+    background-color: #333646; /* Color de fondo */
+    border: 0; /* Borde */
+    font-size: 15px; /* Tamaño de la fuente */
+    color: #F4F6F9; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+:focus {
+    outline: 1px solid #1E92E9; /* Borde al enfocar */
+}
+
+.btn {
+    background-color: #1E92E9; /* Color de fondo */
+    width: 150px; /* Ancho del botón */
+    align-self: flex-end; /* Alinea el botón a la derecha */
+    cursor: pointer; /* Cursor al pasar por encima */
+}
+
+.btn:hover {
+    background-color: #f71515;
+}
+
+@media(max-width: 991px) {
+    body {
+        padding: 30px; /* Espaciado interno */
+    }
+
+    .form-content {
+        width: 100%; /* Ancho del contenedor */
+    }
+
+    form {
+        width: 100%; /* Ancho del contenedor */
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="styleForm.css">
+</head>
+<body>
+    <div class="form-content">
+        <h2>Enviar su Formulario</h2>
+        <form action="https://formsubmit.co/cvivasg@unicauca.edu.co" method="POST">
+            <label for="name">Nombre (*):</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Correo (*):</label>
+            <input type="email" name="email" id="email">
+            <label for="subject">Asunto (*):</label>
+            <input type="text" name="subject" id="subject">
+            <label for="coments">Comentarios</label>
+            <textarea name="coments" id="coments" cols="30" rows="5"></textarea>
+            <input class="btn" type="submit" value="Enviar">
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/Laboratorio3_JavaScript_Formulario/indexForm.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scriptForm.js"></script>
+</body>
+</html>
