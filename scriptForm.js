@@ -10,15 +10,7 @@ window.onload = function() {
     form.onsubmit = async function(event) {
         event.preventDefault(); // Prevenir el envío tradicional del formulario
 
-        // Validación básica
-        if (!name.value.trim() || !email.value.trim() || !subject.value.trim()) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'Oops...',
-                text: 'Por favor, complete los campos obligatorios antes de enviar.'
-            });
-            return; // Detiene la función si la validación falla
-        }
+        // Validación básica del formulario
 
         const confirmation = await Swal.fire({
             title: '¿Está seguro que desea enviar el formulario?',
