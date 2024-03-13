@@ -11,6 +11,14 @@ window.onload = function() {
         event.preventDefault(); // Prevenir el envío tradicional del formulario
 
         // Validación básica del formulario
+        if (name.value === '' || email.value === '' || subject.value === ''){
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Por favor, complete todos los campos.'
+            });
+            return;
+        }
 
         const confirmation = await Swal.fire({
             title: '¿Está seguro que desea enviar el formulario?',
